@@ -1,0 +1,48 @@
+/*
+* @author Shivangam Soni <shivangamsoni99@gmail.com> | https://github.com/ShivangamSoni
+*/
+:root {
+  --color: hsl(100, 100%, 50%);
+  --padding: 20px;
+  --blur: 5px;
+}
+
+body {
+  background: hsl(0, 0%, 15%);
+  color: hsl(0, 0%, 100%);
+  font-family: monospace;
+  font-size: 1.5rem;
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+}
+h1 span {
+  color: var(--color);
+}
+.controls {
+  width: 50%;
+  margin: 0 auto 2rem;
+}
+
+label {
+  text-align: left;
+  display: block;
+}
+
+input {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 0.2rem;
+}
+
+img {
+  max-width: 100%;
+  padding: var(--padding);
+  background-color: var(--color);
+  filter: blur(var(--blur));
+}
