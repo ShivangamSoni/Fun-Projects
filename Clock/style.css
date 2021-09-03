@@ -38,10 +38,9 @@ body {
 /* || Clock Hands || */
 .hand {
   width: 50%;
-  height: 6px;
+  height: 2%;
   position: absolute;
   top: 50%;
-  outline: 2px solid hsl(0, 0%, 0%);
   border-top-left-radius: 300%;
   border-bottom-left-radius: 300%;
   transform-origin: right;
