@@ -1,3 +1,6 @@
+/*
+* @author Shivangam Soni <shivangamsoni99@gmail.com> | https://github.com/ShivangamSoni
+*/
 *,
 *::after,
 *::before {
@@ -10,7 +13,7 @@ html {
 }
 
 body {
-  background-color: hsl(325, 50%, 15%);
+  background-image: linear-gradient(hsl(280, 100%, 50%), hsl(180, 100%, 50%), hsl(180, 100%, 50%), hsl(280, 100%, 50%));
   display: grid;
   grid-template-rows: auto 1fr auto;
   height: 100vh;
@@ -44,7 +47,6 @@ body {
 
 .project {
   font-size: 1.2rem;
-  background-color: hsl(0, 0%, 100%);
   border-radius: 1rem;
   background-repeat: no-repeat;
   background-size: cover;
@@ -59,8 +61,8 @@ body {
   justify-content: space-evenly;
   align-items: center;
   border-radius: inherit;
-  background-color: hsl(250, 20%, 60%, 0.7);
-  color: hsl(0, 100%, 100%);
+  background-color: /*hsl(150, 100%, 50%, 0.7)*/ hsl(0, 0%, 0%, 0.6);
+  color: hsl(0, 0%, 100%);
   text-align: center;
 }
 
@@ -70,14 +72,12 @@ body {
 
 .project-title {
   text-transform: uppercase;
-  text-shadow: 0 0 10px hsl(0, 0%, 0%);
 }
 .project-title:hover {
   text-decoration: underline;
 }
 
 .project-desc {
-  text-shadow: 0 0 3px hsl(0, 0%, 0%);
   padding: 0 0.5rem;
 }
 
@@ -142,5 +142,11 @@ body {
 @media screen and (max-width: 550px) {
   .projects {
     grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (hover: none) {
+  .project-content {
+    display: flex;
   }
 }
