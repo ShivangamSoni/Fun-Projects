@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+
+    <title>Breath & Relax</title>
+  </head>
+  <body>
+    <i class="fas fa-sliders-h setting-btn"> </i>
+    <div class="container">
+      <div class="relaxer">
+        <div class="relaxer-circle"></div>
+      </div>
+      <span class="relaxer-text">Hold</span>
+    </div>
+    <video src="./video/video10.mp4" autoplay muted loop class="bg-video"></video>
+    <audio src="./audio/audio13.mp3" autoplay loop class="bg-audio"></audio>
+
+    <div class="setting" id="setting">
+      <div class="setting-header">
+        <span class="setting-title">Set as You Like</span>
+        <button class="close-btn">&times;</button>
+      </div>
+
+      <div class="setting-body">
+        <label for="videoSelect">
+          Video:
+          <select name="videoSelect" id="videoSelect" autocomplete="off">
+            <option value="1">Video-1</option>
+            <option value="2">Video-2</option>
+            <option value="3">Video-3</option>
+            <option value="4">Video-4</option>
+            <option value="5">Video-5</option>
+            <option value="6">Video-6</option>
+            <option value="7">Video-7</option>
+            <option value="8">Video-8</option>
+            <option value="9">Video-9</option>
+            <option value="10" selected>Video-10</option>
+          </select>
+        </label>
+        <label for="audioSelect">
+          Audio:
+          <select name="audioSelect" id="audioSelect" autocomplete="off">
+            <option value="1">Audio-1</option>
+            <option value="2">Audio-2</option>
+            <option value="3">Audio-3</option>
+            <option value="4">Audio-4</option>
+            <option value="5">Audio-5</option>
+            <option value="6">Audio-6</option>
+            <option value="7">Audio-7</option>
+            <option value="8">Audio-8</option>
+            <option value="9">Audio-9</option>
+            <option value="10">Audio-10</option>
+            <option value="11">Audio-11</option>
+            <option value="12">Audio-12</option>
+            <option value="13" selected>Audio-13</option>
+            <option value="14">Audio-14</option>
+            <option value="15">Audio-15</option>
+          </select>
+        </label>
+      </div>
+    </div>
+  </body>
+</html>
