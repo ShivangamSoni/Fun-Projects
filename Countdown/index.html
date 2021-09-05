@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+    <title>New Year Countdown</title>
+  </head>
+  <body>
+    <h1 class="title"><span id="title">New Year</span> Countdown</h1>
+
+    <div class="countdown">
+      <div class="time">
+        <h2 id="days">00</h2>
+        <small>days</small>
+      </div>
+      <div class="time">
+        <h2 id="hours">00</h2>
+        <small>hours</small>
+      </div>
+      <div class="time">
+        <h2 id="minutes">00</h2>
+        <small>minutes</small>
+      </div>
+      <div class="time">
+        <h2 id="seconds">00</h2>
+        <small>seconds</small>
+      </div>
+    </div>
+
+    <div id="msg" class="msg">Some Text</div>
+
+    <i class="fas fa-sliders-h setting-btn"></i>
+    <div class="setting" id="setting">
+      <button class="close-btn">&times;</button>
+      <label for="new-year">
+        <input type="radio" name="option" id="new-year" checked autocomplete="off" />
+        New Year
+      </label>
+      <label for="april-fool">
+        <input type="radio" name="option" id="april-fool" autocomplete="off" />
+        April Fool
+      </label>
+      <label for="x-mas">
+        <input type="radio" name="option" id="x-mas" autocomplete="off" />
+        Christmas
+      </label>
+      <label for="birth-day">
+        <input type="radio" name="option" id="birth-day" autocomplete="off" />
+        Your Birthday(Select Date of Birth)
+        <input type="date" name="birthDate" id="birthDate" autocomplete="off" />
+      </label>
+      <label for="any-day">
+        <input type="radio" name="option" id="any-day" autocomplete="off" />
+        Any Other Future Date
+        <input type="date" name="anyDate" id="anyDate" autocomplete="off" />
+      </label>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&familt=VT323&family=Rampart+One&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  background-image: linear-gradient(hsla(100, 100%, 50%, 0.7), hsl(200, 100%, 50%, 0.7));
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 80%;
+  height: 100vh;
+  color: hsl(0, 0%, 100%);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* || Dark Overlay Above Background || */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: hsl(0, 0%, 0%, 0.4);
+  z-index: -1;
+}
+
+/* || Changing Color of Selection (For Fun) || */
+::selection {
+  color: hsl(0, 0%, 0%);
+  background-color: hsl(0, 0%, 100%);
+}
+
+/* || Title || */
+.title {
+  font-size: 3rem;
+  text-align: center;
+  text-transform: capitalize;
+  font-family: "Lobster", cursive;
+}
+
+/* || Counter || */
+.countdown {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.time {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "VT323", monospace;
+}
+
+.time h2 {
+  font-size: 2rem;
+  margin: 0;
+}
+.time small {
+  text-transform: capitalize;
+  font-size: 0.7rem;
+}
+
+/* || Message Text || */
+.msg {
+  position: fixed;
+  bottom: 5%;
+  width: 100%;
+  font-size: 5rem;
+  font-weight: bold;
+  text-align: center;
+  text-transform: capitalize;
+  font-family: "Rampart One", cursive;
+  color: hsl(0, 0%, 100%, 0.4);
+}
+
+/* || Settings || */
+.setting-btn {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  font-size: 2rem;
+  padding: 0.5rem;
+  background-color: hsl(0, 0%, 0%, 0.8);
+  cursor: pointer;
+}
+.setting-btn.hide {
+  display: none;
+}
+
+.setting {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  width: 550px;
+  max-width: 90%;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  background-color: hsl(0, 0%, 100%, 0.5);
+  color: hsl(0, 0%, 0%);
+  transform-origin: top right;
+  transform: scale(0);
+  transition: all 500ms linear;
+}
+.setting.active {
+  transform: scale(1);
+}
+.setting .close-btn {
+  position: absolute;
+  top: 1%;
+  right: 1%;
+  outline: none;
+  border: none;
+  background: transparent;
+  color: hsl(0, 0%, 20%);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.setting label {
+  display: block;
+  margin: 0.5rem;
+  font-size: 1.2rem;
+}
+.setting input {
+  outline: none;
+  border: none;
+}
+:is(#birth-day, #any-day) ~ input {
+  background-color: hsl(0, 0%, 0%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 1rem;
+  display: none;
+}
+:is(#birth-day, #any-day):checked ~ input {
+  display: initial;
+}
+
+@media screen and (max-width: 800px) {
+  .title {
+    font-size: 2.7rem;
+  }
+  .msg {
+    font-size: 3rem;
+  }
+}
