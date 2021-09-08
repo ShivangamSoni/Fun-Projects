@@ -1,0 +1,79 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  background: hsl(200, 100%, 50%);
+  font-family: "Courier New", Courier, monospace;
+  font-size: 20px;
+  font-weight: 200;
+}
+
+body {
+  margin: 0;
+}
+
+.search-form {
+  max-width: 400px;
+  margin: 50px auto;
+}
+
+input {
+  width: 100%;
+  padding: 20px;
+}
+
+input.search {
+  position: relative;
+  left: -10%;
+  top: 10px;
+  z-index: 2;
+  width: 120%;
+  margin: 0;
+  text-align: center;
+  outline: none;
+  border: 10px solid hsl(0, 0%, 98%);
+  border-radius: 5px;
+  font-size: 40px;
+  box-shadow: 0 0 5px hsla(0, 0%, 0%, 0.3), inset 0 0 2px hsla(0, 0%, 0%, 0.2);
+}
+
+.suggestions {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  /* perspective: 200px; */
+}
+
+.suggestions li {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  text-transform: capitalize;
+  margin: 0;
+  padding: 20px;
+  background: hsl(0, 0%, 100%);
+  border-bottom: 1px solid hsl(0, 0%, 85%);
+  box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.2);
+  transition: background 0.2s;
+}
+
+.suggestions li:nth-child(odd) {
+  transform: perspective(100px) rotateX(-3deg) translateY(3px);
+  background: linear-gradient(to top, #ffffff 0%, #efefef 100%);
+}
+
+.suggestions li:nth-child(even) {
+  transform: perspective(100px) rotateX(3deg) translateY(2px);
+  background: linear-gradient(to bottom, #ffffff 0%, #efefef 100%);
+}
+
+span.population {
+  font-size: 15px;
+}
+
+.hl {
+  background: hsl(50, 100%, 50%);
+}
